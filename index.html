@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Towards Fully Unsupervised Multi-Domain Image-to-Image Translation</title>
+    <style type="text/css">
+    .center {
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 1.0rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .author {
+        font-size: 1.1rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <center>
+                    <h2 style="margin: 20px;">Towards Fully Unsupervised Multi-Domain <br> Image-to-Image Translation</h2>
+                    <!-- author -->
+                    <div class="row author">
+                        <div class="col-sm-3">
+                            <a href="">Hyojin Bahng</a>
+                            <br>
+                            Korea University
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="">Sunghyo Chung</a>
+                            <br>
+                            Korea University
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="">Seungjoo Yoo</a>
+                            <br>
+                            Korea University
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="">Jaegul Choo</a>
+                            <br>
+                            Korea University
+                        </div>
+                    </div>
+                </center>
+                <!-- Teaser -->
+                <center>
+                    <figure class="figure">
+                        <img src="./figs/teaser.png" class="figure-img img-fluid" alt="Responsive image" style="margin:20px;">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                </center>
+                <!-- Abstract -->
+                <div>
+                    <h3>Abstract</h3>
+                    <p class="lead">
+                        Despite remarkable success in unpaired image-to-image translation, it has never been “truly unsupervised” (i.e., both unpaired and unlabeled). In other words, images have to be labeled according to their domain information. For multi-domain translation tasks, manual annotation becomes highly expensive as a single image has to be assigned multiple domain labels (e.g., 40 attributes for 202,599 im- ages in CelebA dataset). Such requirement for annotated labels fundamentally restricts existing state-of-the-art trans- lation models in its scope of applications. To address this limitation, we propose a fully unsupervised multi-domain image-to-image translation method that can discover multiple unknown domains from unlabeled data and allow translation of fine, disentangled attributes. Experiments show that our method trained on unlabeled data produces high-quality translations, preserves identity, and be perceptually realistic as good as, or better than, state-of-the-art methods trained on labeled data.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Paper and Supplementary Material</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="./figs/paper.png" class="img-fluid border" alt="" style="margin:20px;">
+                        </div>
+                        <div class="col" style="margin-top: auto; margin-bottom: auto;">
+                            <div class="align-middle">
+                                <a href="">[Paper]</a>
+                                <a href="">[Bibtex]</a>
+                                <p>
+                                    Paper
+                                    arxiv 1703.10593, 2017.
+                                    Citation
+                                    Jun-Yan Zhu*, Taesung Park*, Phillip Isola, and Alexei A. Efros. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", in IEEE International Conference on Computer Vision (ICCV), 2017.
+                                    (* indicates equal contributions) Bibtex
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <!-- video -->
+                    <h3>Video</h3>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <h3>Method overview</h3>
+                    <p class="lead">
+                        Despite remarkable success in unpaired image-to-image translation, it has never been “truly unsupervised” (i.e., both unpaired and unlabeled). In other words, images have to be labeled according to their domain information. For multi-domain translation tasks, manual annotation becomes highly expensive as a single image has to be assigned multiple domain labels (e.g., 40 attributes for 202,599 im- ages in CelebA dataset). Such requirement for annotated labels fundamentally restricts existing state-of-the-art trans- lation models in its scope of applications. To address this limitation, we propose a fully unsupervised multi-domain image-to-image translation method that can discover multiple unknown domains from unlabeled data and allow translation of fine, disentangled attributes. Experiments show that our method trained on unlabeled data produces high-quality translations, preserves identity, and be perceptually realistic as good as, or better than, state-of-the-art methods trained on labeled data.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Additional Results</h3>
+                    imgs
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
