@@ -17,6 +17,11 @@
         font-size: 1.0rem;
         font-family: Georgia, "Times New Roman", Times, serif;
     }
+    
+    .lead {
+        font-size: 2.0rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
 
     .author {
         font-size: 1.1rem;
@@ -58,7 +63,7 @@
                         <div class="col-sm-3">
                             <a href="">Jaegul Choo</a>
                         </div>
-                        <br>Korea University
+                        <br><center>Korea University</center>
                     </div>
                 </center>
                 <!-- Teaser -->
@@ -73,7 +78,7 @@
                 <!-- Abstract -->
                 <hr>
                 <div>
-                    <h3>Abstract</h3>
+                    <h3 class="subtitle">Abstract</h3>
                     <p class="lead text-justify">
                         Despite remarkable success in unpaired image-to-image translation, it has never been "truly unsupervised" (i.e., both <span class="font-italic">unpaired</span> and <span class="font-italic">unlabeled</span>). In other words, images must be labeled according to their domain information. For multi-domain translation tasks, manual annotation becomes highly expensive as a single image has to be assigned multiple domain labels (e.g., 40 attributes for 202,599 images in CelebA dataset). Such requirement for annotated labels fundamentally restricts existing state-of-the-art translation models in its scope of applications. To address this limitation, we propose a fully unsupervised multi-domain image-to-image translation method that can discover multiple unknown domains from unlabeled data and allow translation of fine, disentangled attributes.
                         Experiments show that our method trained on <span class="font-italic">unlabeled</span> data produces high-quality translations, preserves identity, and be perceptually realistic as good as, or better than, state-of-the-art methods trained on <span class="font-italic">labeled</span> data.
@@ -81,7 +86,7 @@
                 </div>
                 <hr>
                 <div>
-                    <h3>Paper and Supplementary Material</h3>
+                    <h3 class="subtitle">Paper</h3>
                     <div class="row">
                         <div class="col-sm-3">
                             <img src="./figs/paper.png" class="img-fluid border" alt="" style="margin:20px;">
@@ -103,14 +108,14 @@
                 <hr>
                 <div>
                     <!-- video -->
-                    <h3>Video</h3>
+                    <h3 class="subtitle">Video</h3>
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://youtu.be/l3XGpWRlU1Q" allowfullscreen></iframe>
                     </div>
                 </div>
                 <hr>
                 <div>
-                    <h3>Method overview</h3>
+                    <h3 class="subtitle">Method overview</h3>
                     <div class="row">
                         <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
                             <p class="lead text-justify align-middle">
@@ -133,7 +138,7 @@
                 </div>
                 <hr>
                 <div>
-                    <h3>Additional Results</h3>
+                    <h3 class="subtitle">Additional Results</h3>
                     <center>
                         <figure class="figure">
                             <img src="./figs/supp_fig4.jpg" class="figure-img img-fluid" alt="Responsive image">
