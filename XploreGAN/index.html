@@ -32,9 +32,15 @@
         font-size: 2.0rem;
         font-family: Georgia, "Times New Roman", Times, serif;
     }
+	   
+    img.resize {
+    max-width:50%;
+    max-height:50%;
+    }
 
     .figure-caption {
         color: #6c757d;
+	font-family: Georgia, "Times New Roman", Times, serif;
     }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141263633-1"></script>
@@ -115,7 +121,7 @@
                 <div>
                 <h2 class="subtitle">Method Overview</h2> 
 		    <figure class="figure">
-		        <img src="./figs/model_overview.png" class="figure-img img-fluid" alt="Responsive image" style="margin:20px;">
+		        <img src="./figs/model_overview.png" class="figure-img img-fluid resize" alt="Responsive image">
 		    </figure>
 		    <figcaption class="lead text-justify align-middle">
 		        XploreGAN is composed of two stages: clustering stage and translation stage. The former discretizes the feature space of images by clustering the high-level features extracted from pre-trained networks. Using the cluster assignment as pseudo-label for each domain, we utilize our newly proposed group instance normalization (GIN) to summarize the common attribute (e.g., blond hair) among images in each cluster and perform high-quality multi-domain translation.
