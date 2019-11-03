@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Towards Fully Unsupervised Multi-Domain Image-to-Image Translation</title>
+    <title>Coloring with Words: Guiding Image Colorization Through Text-based Palette Generation</title>
     <style type="text/css">
     .center {
         text-align: center;
@@ -59,12 +59,16 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <center><h1 class="title">Towards Fully Unsupervised <br>Multi-Domain Image-to-Image Translation</h1></center>
+                <center><h1 class="title">Coloring with Words: Guiding Image Colorization Through<br>
+			Text-based Palette Generation</h1></center>
                 <!-- author -->
                 <center><h2 class="author">
-                    <a href="https://hjbahng.github.io">Hyojin Bahng</a>&nbsp;&nbsp;&nbsp;
-                    <a href="">Sunghyo Chung</a>&nbsp;&nbsp;&nbsp;
-                    <a href="https://sjooyoo.github.io">Seungjoo Yoo</a>&nbsp;&nbsp;&nbsp;
+                    <a href="https://hjbahng.github.io">Hyojin Bahng*</a>&nbsp;&nbsp;&nbsp;
+                    <a href="https://sjooyoo.github.io">Seungjoo Yoo*</a>&nbsp;&nbsp;&nbsp;
+		    <a href="https://wonwoongcho.github.io/">Wonwoong Cho*</a>&nbsp;&nbsp;&nbsp;
+		    <a href="">David K. Park</a>&nbsp;&nbsp;&nbsp;
+		    <a href="">Ziming Wu</a>&nbsp;&nbsp;&nbsp;
+		    <a href="">Xiaojuan Ma</a>&nbsp;&nbsp;&nbsp;
                     <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>&nbsp;&nbsp;&nbsp;
                 </h2></center>
                 <center><h2 class="author">
@@ -73,10 +77,7 @@
                 <!-- Teaser -->
                 <center>
                     <figure class="figure">
-                        <img src="./figs/teaser_image_v5.jpg" class="figure-img img-fluid" alt="Responsive image" style="margin:20px 0px;">
-                        <figcaption class="figure-caption text-justify">
-                            Given raw, unlabeled data, our algorithm discovers multiple attributes that exists in data, and performs high-quality multi-domain image translation in a <span class="font-italic">fully unsupervised</span> setting (i.e., both <span class="font-italic">unpaired</span> and <span class="font-italic">unlabeled</span>). All translation results are based on <span class="font-italic">newly-found</span> attributes from our algorithm (e.g., a wide rage of ethnicity, skin and hair color, age, facial hair, accessories, makeup). We do not utilize any pre-defined attribute labels.
-                        </figcaption>
+                        <img src="./figs/teaser_image.jpg" class="figure-img img-fluid" alt="Responsive image" style="margin:20px 0px;">
                     </figure>
                 </center>
                 <!-- Abstract -->
@@ -84,8 +85,20 @@
                 <div>
                     <h2 class="subtitle">Abstract</h2>
                     <p class="lead text-justify">
-                        Despite remarkable success in unpaired image-to-image translation, it has never been "truly unsupervised" (i.e., both <span class="font-italic">unpaired</span> and <span class="font-italic">unlabeled</span>). In other words, images must be labeled according to their domain information. For multi-domain translation tasks, manual annotation becomes highly expensive as a single image has to be assigned multiple domain labels (e.g., 40 attributes for 202,599 images in CelebA dataset). Such requirement for annotated labels fundamentally restricts existing state-of-the-art translation models in its scope of applications. To address this limitation, we propose a fully unsupervised multi-domain image-to-image translation method that can discover multiple unknown domains from unlabeled data and allow translation of fine, disentangled attributes.
-                        Experiments show that our method trained on <span class="font-italic">unlabeled</span> data produces high-quality translations, preserves identity, and be perceptually realistic as good as, or better than, state-of-the-art methods trained on <span class="font-italic">labeled</span> data.
+			    This paper proposes a novel approach to generate multiple 
+			    color palettes that reflect the semantics of input text and then colorize 
+			    a given grayscale image according to the generated color palette. In contrast to 
+			    existing approaches, our model can understand rich text, whether 
+			    it is a single word, a phrase, or a sentence, and generate multiple possible 
+			    palettes from it. For this task, we introduce our manually curated dataset 
+			    called Palette-and-Text (PAT). Our proposed model called Text2Colors 
+			    consists of two conditional generative adversarial networks: the text-to 
+			    palette generation networks and the palette-based colorization networks. 
+			    The former captures the semantics of the text input and produce relevant color palettes. 
+			    The latter colorizes a grayscale image using the generated color palette. 
+			    Our evaluation results show that people preferred 
+			    our generated palettes over ground truth palettes and that our model 
+			    can effectively reflect the given palette when colorizing an image.
                     </p>
                 </div>
                 <hr>
@@ -97,34 +110,17 @@
                         </div>
                         <div class="col" style="margin-top: auto; margin-bottom: auto;">
                             <div class="align-middle">
-                                <a href="">[Paper]</a>
-                                <a href="">[Bibtex]</a>
+                                <a href="https://arxiv.org/abs/1804.04128">[Paper]</a>
+                                <a href="https://github.com/awesome-davian/Text2Colors">[Code]</a>
                                 <p class="lead">
-                                    ArXiv, 2019.
+                                    ECCV, 2018.
                                     <br>
-                                    Hyojin Bahng, Sunghyo Chung, Seungjoo Yoo, and Jaegul Choo. "Towards Fully Unsupervised Multi-Domain Image-to-Image Translation".
+                                    Hyojin Bahng*, Seungjoo Yoo*, Wonwoong Cho*, David K. Park, Ziming Wu, Xiaojuan Ma, and Jaegul Choo. 
+				    "Coloring with Words: Guiding Image Colorization Through Text-based Palette Generation".
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <hr>
-                <div>
-                    <!-- video -->
-                    <h2 class="subtitle">Video</h2>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l3XGpWRlU1Q" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <hr>
-                <div>
-                <h2 class="subtitle">Method Overview</h2> 
-		    <figure class="figure">
-		        <img src="./figs/model_overview.png" class="figure-img img-fluid resize" alt="Responsive image" style="margin:0px 110px;">
-		    </figure>
-		    <figcaption class="lead text-justify align-middle">
-		        XploreGAN is composed of two stages: clustering stage and translation stage. The former discretizes the feature space of images by clustering the high-level features extracted from pre-trained networks. Using the cluster assignment as pseudo-label for each domain, we utilize our newly proposed group instance normalization (GIN) to summarize the common attribute (e.g., blond hair) among images in each cluster and perform high-quality multi-domain translation.
-		    </figcaption>
                 </div>
                 <hr>
                 <div>
