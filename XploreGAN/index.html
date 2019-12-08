@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <center><h1 class="title">Towards Fully Unsupervised <br>Multi-Domain Image-to-Image Translation</h1></center>
+                <center><h1 class="title">Exploring Unlabeled Faces for Novel Attribute Discovery</h1></center>
                 <!-- author -->
                 <center><h2 class="author">
                     <a href="https://hjbahng.github.io">Hyojin Bahng</a>&nbsp;&nbsp;&nbsp;
@@ -75,8 +75,10 @@
                     <figure class="figure">
                         <img src="./figs/teaser_image_v5.jpg" class="figure-img img-fluid" alt="Responsive image" style="margin:20px 0px;">
                         <figcaption class="figure-caption text-justify">
-                            Given raw, unlabeled data, our algorithm discovers multiple attributes that exists in data, and performs high-quality multi-domain image translation in a <span class="font-italic">fully unsupervised</span> setting (i.e., both <span class="font-italic">unpaired</span> and <span class="font-italic">unlabeled</span>). All translation results are based on <span class="font-italic">newly-found</span> attributes from our algorithm (e.g., a wide rage of ethnicity, skin and hair color, age, facial hair, accessories, makeup). We do not utilize any pre-defined attribute labels.
-                        </figcaption>
+                            Given raw, unlabeled data, our algorithm discovers novel facial attributes and performs high-quality multi-domain
+				image translation. All results are based on newly-found attributes from our algorithm (e.g., a wide rage of ethnicity, skin and
+				hair color, age, facial hair, accessories, makeup). We did not use any pre-defined attribute labels to generate the results.
+			</figcaption>
                     </figure>
                 </center>
                 <!-- Abstract -->
@@ -84,9 +86,15 @@
                 <div>
                     <h2 class="subtitle">Abstract</h2>
                     <p class="lead text-justify">
-                        Despite remarkable success in unpaired image-to-image translation, it has never been "truly unsupervised" (i.e., both <span class="font-italic">unpaired</span> and <span class="font-italic">unlabeled</span>). In other words, images must be labeled according to their domain information. For multi-domain translation tasks, manual annotation becomes highly expensive as a single image has to be assigned multiple domain labels (e.g., 40 attributes for 202,599 images in CelebA dataset). Such requirement for annotated labels fundamentally restricts existing state-of-the-art translation models in its scope of applications. To address this limitation, we propose a fully unsupervised multi-domain image-to-image translation method that can discover multiple unknown domains from unlabeled data and allow translation of fine, disentangled attributes.
-                        Experiments show that our method trained on <span class="font-italic">unlabeled</span> data produces high-quality translations, preserves identity, and be perceptually realistic as good as, or better than, state-of-the-art methods trained on <span class="font-italic">labeled</span> data.
-                    </p>
+                        Despite remarkable success in unpaired image-to-image translation, existing systems still require a large amount of
+			labeled images. This is a bottleneck for their real-world applications; in practice, a model trained on labeled CelebA
+			dataset does not work well for test images from a different distribution – greatly limiting their application to unlabeled images of a much larger quantity. In this paper, we
+			attempt to alleviate this necessity for labeled data in the facial image translation domain. We aim to explore the degree 
+			    to which you can discover novel attributes from unlabeled faces and perform high-quality translation. To this end, we
+				use prior knowledge about the visual world as guidance to discover novel attributes and transfer them via a novel
+				normalization method. Experiments show that our method trained on unlabeled data produces high-quality translations, 
+			    preserves identity, and be perceptually realistic as good as, or better than, state-of-the-art methods trained on labeled data.
+			</p>
                 </div>
                 <hr>
                 <div>
@@ -102,7 +110,7 @@
                                 <p class="lead">
                                     ArXiv, 2019.
                                     <br>
-                                    Hyojin Bahng, Sunghyo Chung, Seungjoo Yoo, and Jaegul Choo. "Towards Fully Unsupervised Multi-Domain Image-to-Image Translation".
+                                    Hyojin Bahng, Sunghyo Chung, Seungjoo Yoo, and Jaegul Choo. "Exploring Unlabeled Faces for Novel Attribute Discovery".
                                 </p>
                             </div>
                         </div>
@@ -113,19 +121,9 @@
                     <!-- video -->
                     <h2 class="subtitle">Video</h2>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l3XGpWRlU1Q" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/m8_kCEbfwaE" allowfullscreen></iframe> 
                     </div>
-                </div>
-                <hr>
-                <div>
-                <h2 class="subtitle">Method Overview</h2> 
-		    <figure class="figure">
-		        <img src="./figs/model_overview.png" class="figure-img img-fluid resize" alt="Responsive image" style="margin:0px 110px;">
-		    </figure>
-		    <figcaption class="lead text-justify align-middle">
-		        XploreGAN is composed of two stages: clustering stage and translation stage. The former discretizes the feature space of images by clustering the high-level features extracted from pre-trained networks. Using the cluster assignment as pseudo-label for each domain, we utilize our newly proposed group instance normalization (GIN) to summarize the common attribute (e.g., blond hair) among images in each cluster and perform high-quality multi-domain translation.
-		    </figcaption>
-                </div>
+		    </div>
                 <hr>
                 <div>
                     <h2 class="subtitle">Additional Results</h2>
