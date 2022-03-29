@@ -1,1 +1,158 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Coloring with Words: Guiding Image Colorization Through Text-based Palette Generation</title>
+    <style type="text/css">
+    .center {
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 1.0rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    
+    .subtitle {
+        font-size: 1.6rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .author {
+        font-size: 1.1rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    
+    .title {
+        font-size: 2.0rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+	   
+    img.resize {
+    max-width:70%;
+    max-height:70%;
+    }
+
+    .figure-caption {
+        color: #6c757d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141263633-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141263633-1');
+    </script>
+</head>
+
+<body>
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <center><h1 class="title">Visual Prompting: Modifying Pixel Space to Adapt Pre-trained Models</h1></center>
+                <!-- author -->
+                <center><h2 class="author">
+                    <a href="https://hjbahng.github.io">Hyojin Bahng</a>&nbsp;&nbsp;&nbsp;
+                    <a href="http://people.csail.mit.edu/jahanian/">Ali Jahanian*</a>&nbsp;&nbsp;&nbsp;
+		    <a href="https://swamiviv.github.io/">Swami Sankaranarayanan*</a>&nbsp;&nbsp;&nbsp;<br>
+		    <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>&nbsp;&nbsp;&nbsp;
+                </h2></center>
+                <center><h2 class="author">
+		            MIT CSAIL
+	        </h2></center>
+		<center><h2 class="author">
+	        </h2></center>
+                <!-- Teaser -->
+                <center>
+                    <figure class="figure">
+                        <img src="./figs/teaser_image.png" class="figure-img img-fluid" alt="Responsive image" style="margin:20px 0px;">
+                    </figure>
+                </center>
+                <!-- Abstract -->
+                <hr>
+                <div>
+                    <h2 class="subtitle">Abstract</h2>
+                    <p class="lead text-justify">
+			    Recently, in NLP, prompting has become a new paradigm for lightweight adaptation to down-
+stream tasks. Rather than learning task-specific heads, it steers language models to perform a
+new task by only reformulating the dataset. In vision, linear probing is the standard approach for
+lightweight adaptation while CLIP first introduced textual prompts to enable zero-shot transfer.
+In this paper, we explore the question: can we create prompts with pixels? In other words, can
+pre-trained models adapt to a new task solely by modifying the pixel space? We introduce visual
+prompting which learns a task-specific image perturbation, such that a frozen pre-trained model
+prompted with this perturbation performs a new task. We discover that changing only a few pixels
+is enough to steer models to adapt to new tasks and domains. We show that our method is applicable
+to various vision and vision-language models. The surprising effectiveness of visual prompting
+provides a new perspective on how to adapt and utilize pre-trained models in vision. Code is available
+at https://github.com/hjbahng/visual_prompting/.
+                    </p>
+                </div>
+		<hr>
+                <div>
+                <h2 class="subtitle">Method Overview</h2> 
+		    <figure class="figure">
+		        <img src="./figs/model1.png" class="figure-img img-fluid" alt="Responsive image">
+			<img src="./figs/model2.png" class="figure-img img-fluid" alt="Responsive image">
+		    </figure>
+                </div>
+                <hr>
+                <div>
+                    <h2 class="subtitle">Paper</h2>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="./figs/paper.png" class="img-fluid border" alt="" style="margin:20px;">
+                        </div>
+                        <div class="col" style="margin-top: auto; margin-bottom: auto;">
+                            <div class="align-middle">
+                                <a href="https://arxiv.org/abs/1804.04128">[Paper]</a>
+                                <a href="https://github.com/awesome-davian/Text2Colors">[Code]</a>
+                                <p class="lead">
+                                    ECCV, 2018.
+                                    <br>
+                                    Hyojin Bahng*, Seungjoo Yoo*, Wonwoong Cho*, David K. Park, Ziming Wu, Xiaojuan Ma, and Jaegul Choo. 
+				    "Coloring with Words: Guiding Image Colorization Through Text-based Palette Generation".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+		</div>
+                <hr>
+                <div>
+                    <h2 class="subtitle">Additional Results</h2>
+                    <center>
+                        <figure class="figure">
+                            <img src="./figs/supp2.png" class="figure-img img-fluid" alt="Responsive image">
+                        </figure>
+                    </center>
+                    <center>
+                        <figure class="figure">
+                            <img src="./figs/supp1.png" class="figure-img img-fluid" alt="Responsive image">
+                        </figure>
+                    </center>
+                    <center>
+                        <figure class="figure">
+                            <img src="./figs/supp3.png" class="figure-img img-fluid" alt="Responsive image">
+                        </figure>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
