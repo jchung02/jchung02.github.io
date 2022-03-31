@@ -230,13 +230,11 @@ pre > code {
 				  <td>
 				  	<br>
 			      	  <p style="text-align:justify;margin-top:-30px">
-					  Recently, in NLP, prompting has become a new paradigm for lightweight adaptation to down-stream tasks. Rather than learning task-specific heads, it steers language models to perform a new task by only reformulating the dataset. In vision, linear probing is the standard approach for lightweight adaptation while CLIP first introduced textual prompts to enable zero-shot transfer. In this paper, we explore the question: can we create prompts with pixels? In other words, can pre-trained models adapt to a new task solely by modifying the pixel space? We introduce visual prompting which learns a task-specific image perturbation, such that a frozen pre-trained model prompted with this perturbation performs a new task. We discover that changing only a few pixels is enough to steer models to adapt to new tasks and domains. We show that our method is applicable to various vision and vision-language models. The surprising effectiveness of visual prompting provides a new perspective on how to adapt and utilize pre-trained models in vision. Code is available at https://github.com/hjbahng/visual_prompting/.
-			          </p>
+					  Prompting has recently become a popular paradigm for adapting language models to downstream tasks. Rather than fine-tuning model parameters or adding task-specific heads, this approach steers a model to perform a new task simply by adding a text prompt to the model’s inputs. In this paper, we explore the question: can we create prompts with pixels instead? In other words, can pre-trained vision models be adapted to a new task solely by adding pixels to their inputs? We introduce visual prompting, which learns a task-specific image perturbation such that a frozen pre-trained model prompted with this perturbation performs a new task. We discover that changing only a few pixels is enough to adapt models to new tasks and datasets, and performs on par with linear probing, the current de facto approach to lightweight adaptation. The surprising effectiveness of visual prompting provides a new perspective on how to adapt pre-trained models in vision, and opens up the possibility of adapting models solely through their inputs, which, unlike model parameters or outputs, are typically under an end-user’s control. Code is available at https://hjbahng.github.io/visual_prompting/.
+				  </p>
   	              		  </td>
               		  </tr>
   		  </table>
-
-
 
 		  <hr>
   		  <table align=center width=1000 style="text-align: justify;">
@@ -255,6 +253,7 @@ pre > code {
 
   			  <tr>
   	              <td width=600px>
+			      How visual prompting works. Given a frozen pre-trained model, (a) it improves performance on a task, or (b) enables the model to perform different tasks. Note that the prompts and numbers are actual results using Instagram-pretrained ResNeXt.
   	              </td>
               		 </tr>
   		  </table>
