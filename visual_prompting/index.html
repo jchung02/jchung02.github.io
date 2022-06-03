@@ -136,7 +136,7 @@ pre > code {
 
 <html>
   <head>
-		<title>Visual Prompting: Modifying Pixel Space to Adapt Pre-trained Models</title>
+		<title>Exploring Visual Prompts for Adapting Large-Scale Models</title>
   </head>
 
   <body>
@@ -230,7 +230,7 @@ pre > code {
 				  <td>
 				  	<br>
 			      	  <p style="text-align:justify;margin-top:-30px">
-					  Prompting has recently become a popular paradigm for adapting language models to downstream tasks. Rather than fine-tuning model parameters or adding task-specific heads, this approach steers a model to perform a new task simply by adding a text prompt to the model’s inputs. In this paper, we explore the question: can we create prompts with pixels instead? In other words, can pre-trained vision models be adapted to a new task solely by adding pixels to their inputs? We introduce visual prompting, which learns a task-specific image perturbation such that a frozen pre-trained model prompted with this perturbation performs a new task. We discover that changing only a few pixels is enough to adapt models to new tasks and datasets, and performs on par with linear probing, the current de facto approach to lightweight adaptation. The surprising effectiveness of visual prompting provides a new perspective on how to adapt pre-trained models in vision, and opens up the possibility of adapting models solely through their inputs, which, unlike model parameters or outputs, are typically under an end-user’s control. Code is available at https://hjbahng.github.io/visual_prompting/.
+					  We investigate the efficacy of visual prompting to adapt large-scale models in vision. Following the recent approach from prompt tuning and adversarial reprogramming, we learn a single image perturbation such that a frozen model prompted with this perturbation performs a new task. Through comprehensive experiments, we demonstrate that visual prompting is particularly effective for CLIP and robust to distribution shift, achieving performance competitive with standard linear probes. We further analyze properties of the downstream dataset, prompt design, and output transformation in regard to adaptation performance. The surprising effectiveness of visual prompting provides a new perspective on adapting pre-trained models in vision.
 				  </p>
   	              		  </td>
               		  </tr>
