@@ -45,9 +45,10 @@
     <style>
     .paper-thumbnail {
         margin:10px;
-        height:180px;   /* 원하는 고정 높이 */
-        width:auto;
-        object-fit:contain; /* 비율 유지하면서 맞춤 */
+        width: 100%;       /* col-sm-4 안에서 꽉 차게 */
+        max-width: 300px;  /* 가로폭 최대치 통일 */
+        height: auto;      /* 비율 유지 */
+        object-fit: contain;
     }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
